@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const dataInventor = require('../data/Inventor');
+const {rutaProtegida} = require('../middleware');
+
 
 /* Listado de todos los inventores */
 router.get('/', async function(req, res) {
@@ -41,9 +43,9 @@ router.put('/:id', async (req, res) =>{
 });
 
 // Eliminacion de inventor
-router.delete('/:id', async (req, res)=>{
+router.delete('/delete', rutaProtegida,  async (req, res)=>{
   try {
-    const result = await dataInventor.deleteInventor(req.params.id);
+    const result = await dataInventor.deleteInventor(req.body.id);
     res.send(result);
   } catch (error) {
     res.status(500).send(error);
