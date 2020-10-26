@@ -3,7 +3,6 @@ const chalk = require('chalk');
 const { MongoClient } = require('mongodb');
 require('dotenv').config();
 
-// TODO: Crear variables de entorno, sacar el harcodeo
 const uriMongo = process.env.URIMONGO;
 
 const client = new MongoClient(uriMongo, {useUnifiedTopology: true, useNewUrlParser:true})
