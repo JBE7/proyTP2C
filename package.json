@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "startdev": "nodemon ./bin/www",
-    "start" : "node ./bin/www"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
     "chalk": "^4.1.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "ejs": "~2.6.1",
     "express": "~4.16.1",
     "express-kun": "^1.0.24",
